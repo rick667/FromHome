@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : AbstractStar
 {
-    public Vector2 touchPosition;
+    public Vector2 tp = new Vector2(0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -14,20 +14,11 @@ public class Move : AbstractStar
     // Update is called once per frame
     void Update()
     {
-        if(Input.TouchCount > 0){
-            Touch touch = Input.GetTouch(0);
+        if(Input.touchCount > 0){
+            Touch t = Input.GetTouch(0);
+            tp = t.position;
+            Debug.Log("possition: "+ tp);
 
-
-            switch(touch.phase){
-                case TouchPhase.Began: MonoBehaviour
-                    touchPosition = touch.position;
-                    Debug.Log("position is: " + touchPosition);
-            }
         }
-
-    }
-
-    public void TouchTest(){
-        
     }
 }

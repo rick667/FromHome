@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AbstractStar : MonoBehaviour
 {
-    private int energy;
-    private float spd;
-    private int status; 
+    public int energy = 3;
+    public float spd = 0.05f;
+    public int status = 0; 
 
     // Start is called before the first frame update
     void Start()
