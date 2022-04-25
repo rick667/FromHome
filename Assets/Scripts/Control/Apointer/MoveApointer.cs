@@ -23,7 +23,7 @@ public class MoveApointer : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             
-            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved) 
+            if (touch.phase == TouchPhase.Began) 
             {
             
                 rb.position = new Vector3(((touch.position.x/55)+(497)) , (touch.position.y/65)+(Camera.main.transform.position.y -5), 160);
