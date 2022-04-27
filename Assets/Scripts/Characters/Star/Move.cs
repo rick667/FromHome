@@ -35,7 +35,7 @@ public class Move : AbstractStar
             {
                 if(energy >= 1 && status != 0)
                 {
-                    if(movePower > 0)
+                    if(movePower > 0 && distanceMove > 0)
                     {
                         rb.AddForce(-directionMove * (10 - distanceMove), ForceMode.Impulse);
                         energy = energy -1;

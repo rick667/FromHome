@@ -13,7 +13,6 @@ public class MoveApointer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody> ();
-        Charpos = GameObject.FindWithTag("Characters");
     }
 
     // Update is called once per frame
